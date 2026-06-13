@@ -1,4 +1,4 @@
-本地OrionLib=loadstring(游戏：HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua"))()
+本地OrionLib=load string(游戏：HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua"))()
 
 本地窗口=OrionLib:MakeWindow({
 姓名="在51区生存"，
@@ -16,24 +16,24 @@ _G.SavedCoords=_G.SavedCoords或{}
 局部矿石环=假的
 局部pickaxeLooping=false
 
-local player = game.Players.LocalPlayer
-local replicatedStorage = game:GetService("ReplicatedStorage")
+本地玩家=game.Players.LocalPlayer
+本地复制存储=游戏：GetService("ReplicatedStorage")
 
-local function getRoot()
-    local c = player.Character
-    return c and c:FindFirstChild("HumanoidRootPart")
-end
+局部函数getRoot()
+局部c=player.Character
+返回c和c:FindFirstChild("HumanoidRootPart")
+结束
 
-local function teleport(x, y, z)
-    local r = getRoot()
-    if r then
-        r.CFrame = CFrame.new(x, y, z)
-        return true
-    end
-    return false
-end
+本地功能瞬移(x，y，z)
+局部r=getRoot()
+如果r，则
+r.CFrame=CFrame.new(x，y，z)
+返回true
+结束
+返回false
+结束
 
-local function clickPickaxe(name)
+本地函数单击Pickaxe(名称)
     local char = player.Character
     if not char then return false end
     local tool = char:FindFirstChild(name)
